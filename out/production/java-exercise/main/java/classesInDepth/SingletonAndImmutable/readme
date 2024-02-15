@@ -1,0 +1,28 @@
+- Singleton class
+- Immutable Class
+- Wrapper Class
+
+Singleton Class:
+-------------------
+This class objective is to create only 1 and 1 Object
+
+Different Ways of creating Singleton Class
+
+- Eager Initialization ( cons: too much memory consumption)
+- Lazy Initialization ( cons: memory consumption still not efficient if two thread access at the same time)
+- Synchronization Block ( cons: Its memory issue but its too slow due to thread level locking )
+- Double Check Lock (Cons: In concurrency when thread are coming from two different cors it will create multiple objects in cache to overcome the
+memory issue using volatile which doesn't use cache directly write to memory. So its bit slow as its reading from memory)
+- Bill Pugh Solution ( Its very fast because it uses nest class ( static ) to create instance and its the property of nested that it
+only initiated when its referenced in the code ) - Its the best
+- Enum Singleton ( has only one object per JVM, and has private constructor only once initialized constant
+
+- Immutable Classes
+---------------------
+- We can not change the value of an object once it is created
+- Declare class as 'final' so that it can not be extended
+- All class members should be private. To avoid direct access
+- And class members are initialized only once using constructor
+- There should not be any setter methods, which is generally use to change the value.
+- Just getter method. And return Copy of the member variable.
+Example: String, Wrapper classes

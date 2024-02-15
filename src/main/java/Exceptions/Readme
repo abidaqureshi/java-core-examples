@@ -1,0 +1,46 @@
+What is Exception?
+----------------------
+- Its an event, that occurs during the execution of the program
+- It will disrupt your program normal flow
+- It creates the Exception object, which contain information about the error Type:
+ - Its type of Exception and message
+ - Stack trace etc...
+- Runtime system use this exception Object and find the class which can handle it.
+
+
+Un-Checked/ Runtime Exception
+These are the exceptions which are thrown at runtime and compiler doesn't force us to handle them.
+
+Checked/ Compile time Exception
+Compiler verifies them during the compile time of the code and if not handled properly, code compilation
+will fail.
+
+"throws", tell that, this method might throw this exception so please caller you handle it appropriately.
+
+Using: try, catch, finally, throw, throws
+
+1. Try/Catch:
+- Try block specify the code which can throw exception
+- Try block is followed either by Catch block or finally block
+- Catch block is used to catch all exception which can be thrown in the try block
+- Multiple catch block can be used.
+
+2. Try/catch/finally or try/finally block
+
+- Finally block can be use after try or after catch block
+- Finally block will always get executed, either if you just return from try block or from catch block.
+- At most, we can add only 1 finally block
+- Mostly used for closing the object , adding logs etc..
+- IF JVM related issues like out of memory, system shut down or or process is forcefully killed. Then
+finally block do not get executed
+
+3. Throw:
+- It is used to throw a new exception or
+- To re-throw the exception
+
+At last, lets ask ourself, why we need to handle the exception:
+- It makes our code clean by separating the error handling code from regular code
+- It allows program to recover from the error.
+- It allow us to add more information, which support debugging
+- Improves security, by hiding the sensitive information
+

@@ -1,0 +1,87 @@
+Annotations in Java
+======================
+What is Annotation
+- It is kind of adding META DATA to java code
+- Means, its usage is OPTIONAL
+- We can use this meta information at runtime and can add certain logic in our code if we wanted
+- How to Read Meta to data information? Using Reflection as discussed in previous video
+- Annotations can be applied at anywhere like on Methods, fields, classes, interface and parameters
+
+Annotation used on Java code
+------------------------------
+@Deprecated
+- Usage of Deprecated Class or Methods or Fields, show you compile time WARNING
+- Deprecation means, the code is no longer maintained or improved
+- Can be used over: Constructor, Field, Local Variable, Method, Package, Parameter, Type(class, interface, enum )
+
+@Override
+- During compile time, it will check that the method should be overridden
+- And throws compile time error, if it do not match with the parent method
+- Can be used over: Methods
+
+@SupressWarnings
+- It will tell compiler to IGNORE any compile time warning
+- Use it safely, could lead to Run time exception, if any valid warning is ignore
+- Can be used over:  Field, Method, Parameter, Constructor, Local Variable, Type ( Class, interface or enum)
+
+@FunctionalInterface
+- Restrict Interface to have only 1 abstract method
+- Throws compile time error if interface has more than one abstract method
+- Can be used over Type: ( Class or interface or enum )
+
+@SafeVarargs
+- Used to suppress "Heap pollution warnings"
+- Used over methods and constructors which has variable as arguments or parameters
+- Method should be either static or final
+- In Java9, we can also use it on private methods.
+
+What is heap Pollution
+- Object of one type (String) storing the reference of another object type (Example integer)
+
+Annotations used over Another annotations (META-ANNOTATIONS)
+--------------------------------
+@Target
+- This meta-annotation will restrict, where to use this annotation
+Either at method of Constructor, fields etc....
+
+Element Type
+---------------
+TYPE (Class, Interface, Enum ),
+FIELD,
+METHOD,
+PARAMETER,
+CONSTRUCTOR,
+LOCAL_VARIABLE,
+ANNOTATION_TYPE,
+PACKAGE,
+TYPE_PARAMETER (can be applied on generic types <T>)
+TYPE_USE (Java 8 feature , allow you to use annotation at all places where type you can declare ( like List<@annotation String> )
+
+@Retention
+- This meta-annotation tells, how annotation will be stored in Java
+
+    RetentionPolicy.SOURCE: Annotations will be discarded by the compiler itself and it will not be recorded .class file
+
+    RetentionPolicy.CLASS: Annotations will be recorded in .class file but will be ignore by JVM at run time.
+
+    RetentionPolicy.RUNTIME: Annotations will be recorded in .class file+available during run time Usage of reflection
+    can be done.
+
+@Documented
+- By default, Annotation are ignored when Documentation is generated in Java
+- With the meta-annotation even Annotations will come in Java Docs
+
+@Repeatable
+- Allow us to use same annotation more than 1 some place example ( Category, Categories and Eagle )
+
+We can not do this in Java 8.
+
+User Defined or Custom Annotations
+---------------------------------------
+- We can create our own annotation using keyword "@interface" e.g MyCustomAnnotation
+- No parameter, no body
+- Return type is restricted to Primitive, Class, String, enums, annotations and array types
+
+
+
+

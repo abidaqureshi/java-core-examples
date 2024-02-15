@@ -1,0 +1,29 @@
+1.Java 8 and Java 9 Features
+1. Default Method ( Java 8 )
+- Before Java 8 interface can only have abstract method. and all child classes has to provide abstract method implementation
+- Any new method added in interface means need to change its implementation to all child classes.
+- To add functionality in existing Legacy interface we need to use Default method.
+- If a class implements two interfaces having same default method then class must override that method and provide its
+implementation e.g (Bird, LivingThing, Sparrow )
+- If a interface extends from another interface having a default method then it does not need to provide its implementation, like wise
+class implementing those interface doesn't need to override that method
+e.g ( Bird, Hawk, WhiteHawk )
+- If an interface extends from another interface inheriting a default method to abstract then the implementing class must
+override it. ( Mamal, LandMamal, Wolf)
+- If an interface extends from another interface inheriting a default method can also override it by using its parent implementation
+or provide its own implementation ( Bird, Hawk )
+
+2. Public Static Method (Java8)
+--------------------------
+- We can provide the implementation of the method in interface
+- But it can not be overridden by classes which implement the interface
+- We can access it using Interface name itself
+- Its by default public
+
+3. Private Method and Private Static method only available in ( Java 9 ) example Hipo Interface
+---------------------------------------------------------
+- We can provide the implementation of method but as private access modifier in interface
+- It brings more readability of the code. For example if multiple default method share some code, that this can help
+- It can be defined as static and non-static
+- From static method, we can call only private static interface method.
+- Private static method, can be called from both static and non static method.

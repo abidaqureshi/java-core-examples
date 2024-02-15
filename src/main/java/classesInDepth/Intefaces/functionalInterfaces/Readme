@@ -1,0 +1,47 @@
+What is functional interface
+-------------------------------
+- If an interface contains only 1 abstract method, that is known as functional interface
+- Its also called SAM ( Single Abstract Method )
+- Functional interface annotation (@functionalInterface) is used to mark the interface as functional and
+it throws exception if another abstract Method defined. It restrict us to have only one abstract method
+- Functional interface may have default and static methods or method inherited from the other class
+
+What is Lambda Expression?
+- Lambda Expression is a way to implement functional interface
+- There are different ways of implement functional interface
+- Using "implements"
+- Using "anonymous Class"
+- Using Lambda expression
+---------------------------
+How to use functional interface with Lambda expression?
+Advantage of functional interface?
+Types of functional interface?
+
+- Consumer
+--------------
+--> Represent an operation, that accepts a single input parameter and
+return no result
+--> Present in package: java.util.function
+---------------------
+- Supplier
+--> Represent the supplier of the result
+--> Accepts no input parameter but produce a result
+--> present in package java.util.function
+----------------------
+- Function
+--> Represent function, that accepts one
+argument process it and product result
+--> present in package java.util.function
+------------------
+- Predicate
+--> Represent a function that take a single argument and
+return the boolean.
+--> present. java.util.function
+
+How to handle usecase when a functional interface extends from another interface?
+----------------------------------------------------
+UseCase 1: Functional interface does not extend Non functional interface because a functional interface can have
+only single abstract method. ( e.g LivingThing Interface and Bird Interface )
+- It can only extends the non functional interface if it has default or static method. (e.g Bird and FlyingThing )
+- If both functional interface has the same method to override then they can extend each other ( e.g PeaCock and Fowl )
+

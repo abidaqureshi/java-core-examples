@@ -1,0 +1,91 @@
+What is Reflection?
+
+- This is used to examine the Classes, Methods, Fields, Interfaces at runtime and aslo possible
+to change the behaviour of the class too.
+
+For example:
+- What all methods present in the class.
+- What all fields present in the class.
+- What is the return type of the method.
+- what is the modifier of the class
+- What all interfaces has implemented by the class
+- Change the value of the public and private fields of the class etc.....
+
+2. How to do Reflection of Classes?
+To reflect the class we need to get an Object of the class
+
+What is this class Class
+--------------------------
+- Instance of the class Class represent the class during run time
+- JVM creates one Class object for each and every class which is loaded during run time.
+- This Class Object, has meta data information about the particular class like it method, fields
+constructor etc..
+
+How to get the particular class object?
+--------------------------------------
+There are 3 ways
+
+1. Using forName() method
+--------------------------
+class Bird {}
+
+Class classBird = Class.forName("Bird");
+
+2. Using .class
+--------------------
+//assume we have one class called bird
+class Bird {}
+//get the object of the class for getting the metadata information of class Bird
+Class birdClassObj = Bird.class;
+
+3. Using getClass method
+--------------------------
+class Bird {};
+
+Bird birdObj = new Bird();
+
+Class birdClass = birdObj.getClass();
+----------------------------------------
+
+
+Reflection important methods
+-------------------------------
+getConstructor
+getConstructors
+getDeclaredFields
+getFields
+getInterfaces
+getMethods
+getModifiers
+getPackage
+getProtection domain
+
+----------------------
+Get method supported
+----------------------
+get (Object obj)
+getName();
+getModifiers()
+getType()
+getAnnotation()
+getAnnotatedType()
+getAnnotationsByType()
+getAnnotations()
+getBoolean()
+getByte()
+getChar()
+getDeclaredAnnotations()
+getDeclaredAnnotations
+getDeclaringClass()
+getDouble()
+getFloat()
+getGenericType()
+getInt()
+getLong()
+getShort()
+getDeclaredAnnotationsByType()
+getClass()
+
+
+
+

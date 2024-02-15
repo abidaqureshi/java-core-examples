@@ -1,0 +1,81 @@
+Java interface in Depth
+ - What is Interface and how to define
+ - Why we need Interface
+ - Methods in Interface
+ - Fields in a Interface
+ - Interface Implementation
+ - Nested Interface
+ - Difference between Interface and Abstract class.
+
+ Java 8 interface features:
+ --------------------------
+ - Default Method
+  - How to handle the use-case when, Class implements multiple interfaces have same for the default method
+  - static method
+  - Functional interface
+
+ Java 9 interface features
+ ---------------------------
+  - Private method
+
+  What is Interface
+  --------------------
+  Interface is something which provides a way of interact with each other without exposing their details
+
+  Or in simple it helps achieve ABSTRACTION.
+
+  How to define the interface?
+  ----------------------------
+  Interface declaration consist of
+  - Modifiers
+  - "interface" keyword
+  - Interface Name
+  - Comma separated list of parent interfaces
+  - Body
+  - Interface will be default or Public but never Private or Protected
+
+Why we need interface
+-----------------------
+Interface are used to tell a class what it must do but not how to do it.
+
+Polymorphism
+--------------
+- Interface can be used as a Data type
+- We cannot create the object of the interface, but it holds the reference of the classes who
+implements it, And at run time it decide which method to invoke thats why its called dynamic polymorphism
+
+Multiple Inheritance
+----------------------
+Multiple inheritance is only possible through interfaces
+
+Methods in Interface
+---------------------
+- All methods are implicit public only
+- Methods cannot be declare final
+
+Fields in Interface
+--------------------------
+- Fields are implicitly public , static and final which are (CONSTANTS)
+- You cannot make field private in interface
+
+Interface implementation
+--------------------------
+- Overriding method cannot have more restrictive access modifier ( Can't go public to protected or private in c
+lass who implementing it.
+- Concrete class must override all the methods declared in Interface
+- Abstract classes are not forced to implement all the methods of implemented interface
+- A class can implement from multiple interfaces
+
+Nested Interface
+==============
+- Nested interface declared within another Interface
+- Nested interface declared within a class
+Generally its used to group, logical related interfaced, and Nested interface
+
+Rules:
+ - A nested interface declared withing an interface must be public
+ - A nested interface declared within a class can have any access modifier
+ - When you implement outer interface, inner interface implementation is not required and visa versa.
+ - You can define an interface within a class as private/protected or public ( A class ostrich is an example of it )
+
+

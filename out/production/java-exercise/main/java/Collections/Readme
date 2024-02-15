@@ -1,0 +1,39 @@
+What is Java Collections Framework?
+
+- Added in Java version 1.2
+- Collections is nothing but a group of objects
+- Present in java.util package
+- Framework provide us the architecture to manage these "group of object" i.e add, update, delete, search etc
+
+Why we need Java collections framework?
+
+- Prior to JCF, we have Array, Vector, Hash tables
+- But Problem with that is, we don't have common interface which provide methods to invoke on collections so its difficult
+to remember those methods.
+
+Iterable: Used to traverse the collection
+
+Queue:
+- Queue is an interface, child of an collection interface
+- Generally Queue follow FIFO method yet there is an exception priorityQue
+- Supports all methods available in Collection + some other methods mentioned below.
+
+Priority Que:
+- Priority is of two types, Minimum Priority Que and Maximum priority Que
+- Its uses heap behind its implementation ( min heap and max heap )
+- Elements are ordered according to either Natural order ( default)  or by Comparator provided during queue
+construction time.
+
+Time complexity
+Add and Offer: O(logn)
+Peak: O(1)
+Poll and remove head element: O(logn)
+Remove arbitrary element: O(n)
+
+Primitive Sorting
+----------------
+example is PrimitiveSorting Class
+
+Object collection Sorting
+---------------------------
+example is ObjectCollectionSorting
